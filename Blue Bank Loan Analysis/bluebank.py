@@ -106,6 +106,14 @@ purposecount = loandata.groupby(['purpose']).size()
 purposecount.plot.bar(color = 'red', width = 0.2)
 plt.show()
 
+xpoint = loandata['annualincome']
+ypoint = loandata['dti']
+plt.scatter(ypoint,xpoint, color = '#4caf50')
+plt.show()
+
+#writing to csv
+loandata.to_csv('loan_cleaned.csv', index = True)
+
 
 
 
