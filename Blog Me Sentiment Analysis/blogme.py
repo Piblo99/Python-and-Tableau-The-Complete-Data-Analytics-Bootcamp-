@@ -28,7 +28,8 @@ data = data.drop('engagement_comment_plugin_count', axis=1)
 
 #for loop to isolate each title row
 
-keyword = 'crash'
+
+#keyword = 'crash'
     
 #creating a function
 def keywordflag(keyword):
@@ -50,7 +51,7 @@ keywordflag = keywordflag('murder')
 
 #creating a new columnn in the dataframe
 
-#data['keyword_flag'] = pd.Series(keywordflag)
+data['keyword_flag'] = pd.Series(keywordflag)
 
 
 #SentimentIntensityAnalyzer
